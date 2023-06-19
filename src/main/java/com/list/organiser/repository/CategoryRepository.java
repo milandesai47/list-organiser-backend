@@ -10,4 +10,6 @@ public interface CategoryRepository extends CrudRepository<Category, Long> {
 
     @Query(value ="select * from CATEGORY where category_id = :categoryId", nativeQuery = true)
     Category findByCategoryId(Long categoryId);
+
+    Category findCategoryByCategoryName(String categoryName);
 }

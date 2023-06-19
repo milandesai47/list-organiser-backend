@@ -22,43 +22,19 @@ public class ItemController {
         return allItems;
     }
 
-//    @RequestMapping(path = "/home", method = RequestMethod.GET)
-//    public Model getAllItemsHtml(Model model) {
-//        List allItems = itemService.findAll();
-//        for(int i=0; i<= allItems.size(); i++){
-//            model.addAttribute("item", allItems.get(0));
-//        }
-//        return model;
-//    }
-
     @GetMapping(path = "/count")
     public Long getItemCount() {
         return itemService.count();
     }
 
-    @RequestMapping(path = "/{itemId}")
+    @GetMapping(path = "/{itemId}")
     public Optional<Item> getItemById(@PathVariable("itemId") String itemId) {
         return itemService.fineOne(Long.parseLong(itemId));
     }
-
-    @RequestMapping(path = "/categoryId/{categoryId}")
-    public List<Item> getItemByCategoryId(@PathVariable("categoryId") int categoryId) {
-        return itemService.findItemByCategoryId(new Long(categoryId));
+    @GetMapping(path = "/categoryId/{categoryId}")
+    public List<Item> getItemByCategoryId(@PathVariable("categoryId") long categoryId) {
+        return itemService.findItemByCategoryId(categoryId);
     }
 
-//    @RequestMapping(path = "/categoryName/{categoryName}")
-//    public List<Item> getItemByCategoryName(@PathVariable("categoryName") String categoryName) {
-//        return itemService.findItemByCategoryName(categoryName);
-//    }
-
-    @PostMapping
-    public void insertCategory(@RequestBody Item item){
-        itemService.save(item);
-    }
-
-    @DeleteMapping(path = "/delete/{itemId}")
-    public void deleteCategory(@PathVariable("itemId") String itemId) {
-        itemService.delete(Long.parseLong(itemId));
-    }
 
 }

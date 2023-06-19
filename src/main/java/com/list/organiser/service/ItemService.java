@@ -32,14 +32,6 @@ public class ItemService {
         return itemRepository.findById(itemId);
     }
 
-    public void save(Item item){
-        itemRepository.save(item);
-    }
-
-    public void delete(Long itemId) {
-        itemRepository.deleteById(itemId);
-    }
-
     public List<Item> findItemByCategoryId(Long categoryId) {
         Iterable<Item> items = itemRepository.findItemsByCategoryId(categoryId);
 
@@ -48,15 +40,6 @@ public class ItemService {
 
         return itemList;
     }
-
-//    public List<Item> findItemByCategoryName(String categoryName) {
-//        Iterable<Item> items = itemRepository.findItemsByCategoryName(categoryName);
-//
-//        List itemList = new ArrayList<Item>();
-//        items.forEach(e -> itemList.add(e));
-//
-//        return itemList;
-//    }
 
     public Item findItemByItemName(String itemName) {
         return itemRepository.findItemsByItemName(itemName);

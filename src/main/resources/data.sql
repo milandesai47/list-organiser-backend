@@ -1,14 +1,15 @@
 --CATEGORIES
-INSERT INTO category (category_id, category_Name) VALUES
-  (1, 'chilled veg');
-INSERT INTO category (category_id, category_Name) VALUES
-  (2, 'dairy');
-INSERT INTO category (category_id, category_Name) VALUES
-  (3, 'meat');
-INSERT INTO category (category_id, category_Name) VALUES
-  (4, 'fruit');
-INSERT INTO category (category_id, category_Name) VALUES
-  (5, 'other');
+
+INSERT INTO category (category_Name) VALUES
+    ('chilled veg');
+INSERT INTO category (category_Name) VALUES
+    ('dairy');
+INSERT INTO category (category_Name) VALUES
+    ('meat');
+INSERT INTO category (category_Name) VALUES
+    ('fruit');
+INSERT INTO category (category_Name) VALUES
+    ('other');
 
 --ITEMS
 INSERT INTO item ( category_id ,item_name) VALUES

@@ -30,6 +30,10 @@ public class CategoryService {
         return categoryRepository.findByCategoryId(categoryId);
     }
 
+    public Category findCategoryByName(String name) {
+        return categoryRepository.findCategoryByCategoryName(name);
+    }
+
     public void save(Category category) {
         categoryRepository.save(category);
     }

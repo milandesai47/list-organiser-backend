@@ -29,13 +29,13 @@ public class CategoryController {
         return categoryService.findOne(Long.parseLong(categoryId));
     }
 
-    @PostMapping
-    public void insertCategory(@RequestBody Category category){
-        categoryService.save(category);
-    }
+//    @PostMapping
+//    public void insertCategory(@RequestBody Category category){
+//        categoryService.save(category);
+//    }
 
-    @DeleteMapping(path = "/delete/{categoryId}")
-    public void deleteCategory(@PathVariable("categoryId") String categoryId) {
-        categoryService.delete(Long.parseLong(categoryId));
-    }
+//    @DeleteMapping(path = "/delete/{categoryId}")
+//    public void deleteCategory(@PathVariable("categoryId") String categoryId) {
+//        categoryService.delete(Long.parseLong(categoryId));
+//    }
 }

@@ -14,7 +14,5 @@ public interface ItemRepository extends CrudRepository<Item, Long> {
     @Query(value = "select * from ITEM where ITEM_NAME = :item_name", nativeQuery = true)
     Item findItemsByItemName(String item_name);
 
-//    @Query(value = "SELECT I.ITEM_ID, ITEM_NAME, C.CATEGORY_NAME FROM ITEM I JOIN CATEGORY C WHERE I.CATEGORY_ID = C.CATEGORY_ID AND C.CATEGORY_NAME = :category_name", nativeQuery = true)
-//    Iterable<Item> findItemsByCategoryName(String categoryName);
 
 }
