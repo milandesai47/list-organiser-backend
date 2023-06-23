@@ -49,7 +49,7 @@ public class OrganiserService {
 
 
     private Category extractCategoryName(String item) {
-        return categoryService.findOne(itemService.findItemByItemName(item).getCategoryId());
+        return categoryService.findOne(itemService.findItemByItemName(item).getCategoryId().getCategoryId());
     }
 
 }

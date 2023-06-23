@@ -1,6 +1,6 @@
 --CATEGORIES
 INSERT INTO category (category_Name) VALUES
-    ('chilled veg');
+    ('veg');
 INSERT INTO category (category_Name) VALUES
     ('dairy');
 INSERT INTO category (category_Name) VALUES

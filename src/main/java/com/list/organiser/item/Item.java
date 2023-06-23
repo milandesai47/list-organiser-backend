@@ -22,6 +22,15 @@ public class Item {
     @NotNull
     private String itemName;
 
+    public Item(Category categoryId, String itemName) {
+        this.categoryId = categoryId;
+        this.itemName = itemName;
+    }
+
+    public Item() {
+
+    }
+
     public Long getItemId() {
         return itemId;
     }
@@ -30,8 +39,8 @@ public class Item {
         this.itemId = itemId;
     }
 
-    public Long getCategoryId() {
-        return categoryId.getCategoryId();
+    public Category getCategoryId() {
+        return categoryId;
     }
 
     public void setCategoryId(Category categoryId) {

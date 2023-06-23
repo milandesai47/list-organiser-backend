@@ -15,6 +15,14 @@ public class Category {
     @Column
     private String categoryName;
 
+    public Category(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
+    public Category() {
+
+    }
+
     public Long getCategoryId() {
         return categoryId;
     }
